@@ -19,7 +19,7 @@ import random
 import copy
 
 if TYPE_CHECKING:
-    from core.environment import EnvironmentState
+    from environment import EnvironmentState
 
 
 class GeneType(Enum):

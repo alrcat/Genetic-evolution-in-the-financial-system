@@ -14,7 +14,7 @@ from datetime import datetime
 
 if TYPE_CHECKING:
     from core.agent import Agent, DeathCause
-    from core.environment import Environment
+    from environment import Environment
     from core.dna import DNA
 
 

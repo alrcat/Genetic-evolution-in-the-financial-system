@@ -13,7 +13,7 @@ from typing import Any, Callable, Dict, List, Optional
 from datetime import datetime
 
 from core.world_clock import WorldClock
-from core.environment import Environment, Order
+from environment import Environment, Order
 from core.agent import Agent
 from simulation.population import Population
 from lifecycle.death import DeathMechanism, DeathCertificate

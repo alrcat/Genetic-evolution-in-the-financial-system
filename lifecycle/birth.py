@@ -12,7 +12,7 @@ from typing import List, Optional, TYPE_CHECKING
 import random
 
 from core.agent import Agent, Lineage
-from core.resources import AgentResources
+from resources import AgentResources
 from core.dna import DNA
 
 if TYPE_CHECKING:

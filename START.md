@@ -297,7 +297,7 @@ print(f"总死亡事件: {len(events)}")
 
 ```python
 from core.gene import Gene, GeneType, GeneExpression
-from core.environment import EnvironmentState
+from environment import EnvironmentState
 
 class MyCustomGene(Gene):
     """你的自定义基因"""

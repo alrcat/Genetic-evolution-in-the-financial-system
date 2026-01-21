@@ -402,6 +402,18 @@ class EventStore:
             "event_types": type_counts,
         }
     
+    def get_event_counts(self) -> Dict[str, int]:
+        """
+        获取各类事件的计数
+        
+        Returns:
+            事件类型 -> 数量的字典
+        """
+        return {
+            t.name: len(indices) 
+            for t, indices in self._type_index.items()
+        }
+    
     def __len__(self) -> int:
         return len(self._events)
     

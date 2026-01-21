@@ -11,11 +11,11 @@
 """
 
 from core.world_clock import WorldClock
-from core.resources import AgentResources, ResourceType
+from resources import AgentResources, ResourceType
 from core.gene import Gene, GeneType, GeneExpression
 from core.dna import DNA, Chromosome, Phenotype
 from core.agent import Agent, AgentState
-from core.environment import Environment, MarketState, MarketRegime
+from environment import Environment, MarketState, MarketRegime
 
 __all__ = [
     "WorldClock",

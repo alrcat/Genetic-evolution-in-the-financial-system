@@ -267,6 +267,18 @@ class Graveyard:
         
         return self._stats_cache
     
+    def get_recent(self, n: int) -> List[GraveyardEntry]:
+        """
+        获取最近N个死亡条目
+        
+        Args:
+            n: 数量
+            
+        Returns:
+            条目列表（最近的在最后）
+        """
+        return self._entries[-n:] if n > 0 else []
+    
     def get_extinction_report(self) -> Dict[str, Any]:
         """
         获取灭绝报告

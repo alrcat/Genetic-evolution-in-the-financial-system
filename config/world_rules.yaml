@@ -43,5 +43,5 @@ storage:
 
 # 运行配置
 simulation:
-  default_ticks: 100000         # 默认运行tick数
-  print_interval: 1000          # 打印间隔
+  default_ticks: 10000         # 默认运行tick数
+  print_interval: 100          # 打印间隔

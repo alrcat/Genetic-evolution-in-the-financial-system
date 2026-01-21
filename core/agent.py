@@ -14,12 +14,12 @@ from enum import Enum, auto
 from typing import Any, Dict, List, Optional, TYPE_CHECKING
 import uuid
 
-from core.resources import AgentResources
+from resources import AgentResources
 from core.dna import DNA, Phenotype, TradeAction
 from core.gene import SignalDirection
 
 if TYPE_CHECKING:
-    from core.environment import Environment, EnvironmentState, Order, ExecutionResult
+    from environment import Environment, EnvironmentState, Order, ExecutionResult
 
 
 class AgentState(Enum):
@@ -212,7 +212,7 @@ class Agent:
         Returns:
             交易订单（如果有的话）
         """
-        from core.environment import Order
+        from environment import Order
         
         # 0. 死亡Agent不行动
         if not self.is_alive:
@@ -311,7 +311,7 @@ class Agent:
         Returns:
             订单
         """
-        from core.environment import Order
+        from environment import Order
         
         # 检查风险预算
         required_risk = action.position_size * self.resources.capital * action.stop_loss

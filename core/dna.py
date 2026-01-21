@@ -18,7 +18,7 @@ import copy
 from core.gene import Gene, GeneType, GeneExpression, SignalDirection
 
 if TYPE_CHECKING:
-    from core.environment import EnvironmentState
+    from environment import EnvironmentState
 
 
 @dataclass

@@ -1,0 +1,51 @@
+[project]
+name = "genetic-financial-ecosystem"
+version = "0.1.0"
+description = "一个类生物进化的金融交易生态系统 - 不寻找最优策略，而是构造允许自然选择发生的金融生态"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Evolutionary Finance Research"}
+]
+keywords = ["evolution", "genetic", "trading", "ecosystem", "artificial-life"]
+
+dependencies = [
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "pydantic>=2.0.0",
+    "uuid7>=0.1.0",
+    "PyYAML>=6.0",
+    "rich>=13.0.0",
+    "tqdm>=4.65.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+]
+visualization = [
+    "matplotlib>=3.7.0",
+    "networkx>=3.0",
+    "plotly>=5.14.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["core*", "genetics*", "lifecycle*", "market*", "genes*", "storage*", "simulation*", "analysis*"]
+
+[tool.black]
+line-length = 100
+target-version = ['py310']
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "W", "I", "N"]
+ignore = ["E501"]

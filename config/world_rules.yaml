@@ -1,0 +1,47 @@
+# 世界规则配置
+# 人类只能在这里定义规则，不能指定赢家
+
+# 种群配置
+population:
+  initial_size: 100        # 初始种群大小
+  max_size: 500           # 最大种群大小（环境承载力）
+  enable_carrying_capacity: true  # 是否启用承载力限制
+
+# 繁殖规则
+reproduction:
+  mode: "mixed"           # asexual（无性）, sexual（有性）, mixed（混合）
+  mutation_rate: 0.1      # 基础突变率
+  crossover_rate: 0.7     # 交叉概率
+  reproduction_threshold: 100  # 繁殖能量阈值
+  cooldown_ticks: 50      # 繁殖冷却期
+
+# 死亡规则
+death:
+  survival_threshold: 100.0    # 生存资本阈值
+  dying_threshold: 10          # 濒死tick阈值
+  enable_natural_death: false  # 是否启用自然死亡
+  max_lifespan: null           # 最大寿命（null表示无限）
+
+# 资源规则
+resources:
+  initial_capital: 1000.0     # 初始资本
+  capital_variance: 0.2        # 资本随机变化幅度
+  metabolism_rate_range: [0.5, 2.0]  # 代谢率范围
+
+# 市场环境
+market:
+  initial_price: 100.0
+  base_volatility: 0.02
+  commission_rate: 0.001
+  slippage_factor: 0.1
+
+# 存储配置
+storage:
+  snapshot_interval: 100       # 快照间隔
+  persist_path: null           # 持久化路径（null表示不持久化，即只存储在内存）
+  max_memory_events: 100000    # 内存中最大事件数
+
+# 运行配置
+simulation:
+  default_ticks: 100000         # 默认运行tick数
+  print_interval: 1000          # 打印间隔

@@ -1,0 +1,18 @@
+# 核心依赖
+numpy>=1.24.0
+pandas>=2.0.0
+pydantic>=2.0.0
+uuid7>=0.1.0
+PyYAML>=6.0
+rich>=13.0.0
+tqdm>=4.65.0
+
+# 可视化（可选）
+matplotlib>=3.7.0
+networkx>=3.0
+plotly>=5.14.0
+
+# 开发依赖（可选）
+pytest>=7.0.0
+black>=23.0.0
+ruff>=0.1.0
